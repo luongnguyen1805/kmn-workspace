@@ -10,9 +10,9 @@
 
 Instead of relying on external knowledge bases, MCP servers, vector databases, or separate knowledge management applications, KMN stores project metadata inside the repository as structured, version-controlled Markdown.
 
-The implementation of this methodology is called the **KMN-Workspace**.
+The implementation of this methodology is called the **KMN-Layer**.
 
-A KMN-Workspace forms a lightweight **metadata layer** that exists alongside the primary project content while remaining completely independent from it.
+A KMN-Layer forms a lightweight **metadata layer** that exists alongside the primary project content while remaining completely independent from it.
 
 The primary project remains the single source of truth.
 
@@ -68,11 +68,11 @@ Navigation answers:
 
 > **Where should I look?**
 
-# KMN-Workspace
+# KMN-Layer
 
-A **KMN-Workspace** is the metadata layer implementing the KMN strategy.
+A **KMN-Layer** is the metadata layer implementing the KMN strategy.
 
-A workspace typically contains:
+Layer typically contains:
 
 ```text
 .navigation/
@@ -94,7 +94,7 @@ They are not part of the primary project implementation.
 
 # Metadata Layer
 
-The KMN-Workspace forms an independent metadata layer.
+The KMN-Layer forms an independent metadata layer.
 
 ```
 Repository
@@ -106,7 +106,7 @@ Repository
 │   ├── Assets
 │   └── ...
 │
-└── KMN-Workspace
+└── KMN-Layer
     ├── .navigation
     ├── .knowledge
     └── .memory
@@ -142,7 +142,7 @@ KMN intentionally keeps knowledge local.
 
 Each metadata layer is responsible only for its own area of the repository.
 
-Large repositories naturally become a hierarchy of small KMN-Workspaces rather than one centralized knowledge base.
+Large repositories naturally become a hierarchy of small KMN-Layer rather than one centralized knowledge base.
 
 This keeps metadata:
 
@@ -169,7 +169,7 @@ KMN is not intended to replace MCP servers, vector search, or enterprise knowled
 
 Instead, it provides a lightweight repository-native foundation.
 
-Projects may later index a KMN-Workspace using external retrieval systems if desired, while continuing to maintain repository knowledge as ordinary Markdown.
+Projects may later index a KMN-Layer using external retrieval systems if desired, while continuing to maintain repository knowledge as ordinary Markdown.
 
 # Design Goals
 
